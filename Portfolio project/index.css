@@ -1,0 +1,463 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1bbff1;
+    font-family: "Slabo 27px", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* --------------- profile ----------------------------- */
+.profile {
+    min-height: 350px;
+    width: 25%;
+    position: fixed;
+    background-color: black;
+    color: white;
+    margin: 49px 0px 0px 72px;
+    box-shadow: 0px 0px 15px 1px #000000;
+}
+
+.icons {
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+
+}
+
+.profileimg {
+    height: 300px;
+    width: 100%;
+}
+
+/* ----------------------- navbar ----------------------------- */
+.topnav {
+    position: fixed;
+    z-index: 999;
+}
+
+
+/* ----------------------------- about ---------------------------------- */
+
+.abouts {
+    margin-top: 40px;
+    margin-left: 70px;
+
+}
+
+.leftprofile {
+    position: relative;
+    top: 58px;
+}
+
+/* --------------------------right content--------------------------------- */
+.rightcontent {
+    position: absolute;
+    left: 390px;
+}
+
+/* ----------------------------- skills -------------------------------------- */
+.skills {
+    margin-left: 70px;
+}
+
+.experiences {
+    margin-left: 70px;
+}
+
+.projects {
+    margin-left: 70px;
+}
+
+.contacts {
+    margin-left: 70px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+/* ---------------------------------- Animation block ------------------------------------- */
+.block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.port {
+    animation: folio 1s linear;
+}
+
+.toplinks {
+    animation: toplinks 1s linear;
+}
+
+.profile {
+    animation: profile 1s linear;
+}
+
+.icons a {
+    animation: anger 1s ease-in;
+}
+
+.me {
+    animation: me 1s linear;
+}
+
+.me+p {
+    animation: para 1s linear;
+}
+
+.details {
+    animation: detail 1s ease-in;
+}
+
+.years {
+    animation: year 1s ease-in;
+}
+
+
+/* ------------------------------------ keyframes --------------------------------------------- */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.4;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes folio {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes toplinks {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes profile {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes anger {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes me {
+    from {
+        opacity: 0;
+        scale: 0.3;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes para {
+    from {
+        opacity: 0;
+        scale: 0.3;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes year {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes detail {
+    from {
+        opacity: 0;
+        transform: translateY(250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+/* -------------------------------- RESPONSIVE ----------------------------------------- */
+
+@media only screen and (min-width:300px) and (max-width: 450px) {
+
+    /* ----------------profile----------------------- */
+    .profile {
+        width: 100%;
+        margin: 50px 0px 0px 0px;
+        position: sticky;
+    }
+
+    .profileimg {
+        height: 250px;
+        width: 100%;
+    }
+
+    /* --------------------leftprofile---------------- */
+    .leftprofile {
+        flex-direction: column;
+    }
+
+    .rightcontent {
+        left: 0px;
+        margin: 50px 0px 0px 0px;
+        padding: 0px 0px 50px 0px;
+        position: unset;
+        /* color: white; */
+    }
+
+    .abouts {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .skills {
+        margin-left: 0px;
+    }
+
+    .experiences {
+        margin-left: 0px;
+    }
+
+    .projects {
+        margin-left: 0px;
+    }
+
+    .contacts {
+        margin-left: 0px;
+    }
+
+    /* ---------------- Header --------------- */
+
+    .header {
+        padding: 0px 0px;
+    }
+
+    .leftright {
+        padding: 0px 30px;
+    }
+
+    .icons {
+        margin-top: 50px;
+        margin-bottom: 10px;
+
+    }
+
+    .btns {
+        padding: 10px;
+    }
+
+    .exborder {
+        border: unset !important;
+        padding-left: 0px !important;
+    }
+}
+
+@media only screen and (min-width:451px) and (max-width:778px) {
+    .profile {
+        width: 100%;
+        flex-direction: row !important;
+        min-height: unset;
+        padding: 10px;
+        margin: 50px 0px 0px 0px;
+        position: sticky;
+    }
+
+    .profileimg {
+        width: 50%;
+    }
+
+    .imagebottom {
+        width: 50%;
+    }
+
+    .header {
+        padding: 0px 10px;
+    }
+
+    .icons {
+        margin-top: 70px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /*-------------------- leftprofile---------------------------- */
+
+
+    .header {
+        padding: 0px 0px;
+    }
+
+    .leftright {
+        padding: 0px 30px;
+    }
+
+    .leftprofile {
+        flex-direction: column;
+    }
+
+    .rightcontent {
+        left: 0px;
+        margin: 50px 0px 0px 0px;
+        padding: 0px 0px 50px 0px;
+        position: unset;
+
+    }
+
+    .abouts {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .skills {
+        margin-left: 0px;
+    }
+
+    .experiences {
+        margin-left: 0px;
+    }
+
+    .projects {
+        margin-left: 0px;
+    }
+
+    .contacts {
+        margin-left: 0px;
+    }
+
+    .exborder {
+        border: unset !important;
+        padding-left: 0px !important;
+    }
+
+}
+
+@media only screen and (min-width:779px) and (max-width:900px) {
+    .profile {
+        width: 35%;
+        margin: 60px 0px 0px 0px;
+    }
+
+    .profileimg {
+        height: 200px;
+        width: 100%;
+    }
+
+    /*-------------------- leftprofile---------------------------- */
+
+
+    .header {
+        padding: 0px 0px;
+        /* color: white; */
+    }
+
+    .leftright {
+        padding: 0px 30px;
+    }
+
+    .rightcontent {
+        left: 0px;
+        margin: 50px 0px 0px 320px;
+        padding: 0px 0px 0px 0px;
+        position: absolute;
+        color: rgb(17, 17, 17);
+        width: 58%
+    }
+
+    .abouts {
+        margin-top: 0px;
+        margin-left: 0px;
+        color: black;
+    }
+
+    .skills {
+        margin-left: 0px;
+    }
+
+    .experiences {
+        margin-left: 0px;
+    }
+
+    .projects {
+        margin-left: 0px;
+    }
+
+    .contacts {
+        margin-left: 0px;
+    }
+
+    .exborder {
+        border: unset !important;
+        padding-left: 0px !important;
+    }
+
+}
+
+
+@media only screen and (min-width:900px) and (max-width:1150px) {
+    .profile {
+        width: 35%;
+        margin: 50px 0px 0px 50px;
+    }
+
+    .profileimg {
+        height: 220px;
+        width: 100%;
+    }
+}
